@@ -25,4 +25,4 @@ then
 fi
 
 (rclone sync ~/data drive-encrypted:/data -v --exclude="**/.git/**" --exclude="**/node_modules/**" --exclude="**/.env/**" --exclude="**/.venv/**" --exclude="**/.cache/**" --exclude="**/.Cache/**" && notify-send "sync data to drive") &
-(rclone sync ~/data ufudrive-encrypted:/ --progress || echo "erro na ufu...")  && notify-send 'sync to ufudrive encrypted'
+(rclone sync ~/data ufudrive-encrypted:/ --progress --transfers 2 --buffer-size=0 || echo "erro na ufu...")  && notify-send 'sync to ufudrive encrypted'
