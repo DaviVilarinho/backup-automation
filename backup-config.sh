@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 backup_dir=~/backups
 
